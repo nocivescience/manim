@@ -32,6 +32,8 @@ class Evaporacion(Scene):
                     mob.position[1]=-rectangle.height/2+0.4
                     mob.set_opacity(1)
                 mob.move_to(mob.position)
+                mob.rotate(TAU*np.random.uniform(-.1,.1))
+                mob.shift(np.random.uniform(-.1,.1)*RIGHT)
         dots.add_updater(get_update)
         self.add(dots)
         self.wait()
